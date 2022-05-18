@@ -20,9 +20,7 @@ export default defineComponent({
 
 <style lang="scss">
 
-$navy-blue: #160F30;
-$neon-purple: #9C19E0;
-$grey: #DBDBEB;
+@import "@/assets/scss/variables.scss";
 
 body{
   margin: 0;
@@ -30,8 +28,6 @@ body{
   background-color: $navy-blue;
   color: $grey;
   max-width: 1800px;
-  padding: 0 150px;
-  
 }
 
 #app {

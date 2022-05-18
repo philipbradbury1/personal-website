@@ -27,5 +27,8 @@ export default defineComponent({
 </script>
 
 <style lang="scss">
+  main{
+    padding: 0 150px;
+  }
   
 </style>

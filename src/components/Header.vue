@@ -2,12 +2,13 @@
     <header>
 
         <div>
+          <img  src="@/assets/images/logo.png" class="logo-img" style="">  
         </div>
 
         <nav>
             <div>
                 <router-link to="/#about">About</router-link>
-                <router-link to="/#projects">Projects</router-link>
+                <router-link to="/#featured">Projects</router-link>
                 <router-link to="/#work">Work</router-link>
                 <router-link to="/#contact">Contact</router-link>
                 <div>
@@ -30,15 +31,19 @@ export default defineComponent({
 
 
 <style lang="scss">
- 
-//$navy-blue: #160F30;
-// $neon-purple: #9C19E0;
-//$grey: #DBDBEB;
+
+@import "@/assets/scss/variables.scss";
  
 header{
     display: flex;
     justify-content: space-between;
     height: 80px;
+
+    .logo-img{
+      width:75px;
+      margin-top:10px;
+      margin-left: 48px;
+    }
 } 
 
 nav {
