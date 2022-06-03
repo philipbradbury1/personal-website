@@ -34,14 +34,13 @@ export default defineComponent({
 
 @import "@/assets/scss/variables.scss";
 
-.hero{
-    position: relative;
-}
+    .hero{
+        position: relative;
+    }
 
     .shape{
         position: absolute;
         z-index: -1;
-        
     }
 
     .circle1{
@@ -110,9 +109,6 @@ export default defineComponent({
         top: 64%;
     }
 
-
-
-
     .circle{
         width: 140px;
         height: 140px;
@@ -146,7 +142,6 @@ export default defineComponent({
         top: 45%;
     }
 
-
     .triangle-up1{
         border-top: 28px solid $dark-purple;
         border-left: 16px solid transparent; 
@@ -154,9 +149,6 @@ export default defineComponent({
         right: 35%;
         top: 10%;
     }
-
-
-
 
     h1{
         font-size: 70px;
@@ -178,11 +170,20 @@ export default defineComponent({
         flex-direction: column;
         justify-content: center;
         height: 100vh;
-        //background-image: url('@/assets/images/waves3.png');
-        //background-repeat: no-repeat;
-        //background-attachment: fixed;
-        //background-position: right top;
-        //background-size: 50% auto ;
     }
+
+
+    @media screen and (max-width:768px) {
+
+        h1{
+            font-size: 40px;
+        }
+
+
+
+        h3{
+            font-size: 26px;
+        }
+  }
 
 </style>

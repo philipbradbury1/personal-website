@@ -1,7 +1,7 @@
 <template>
     <section id="about">
 
-        <div>
+        <div class="about__text">
             <h3>About Me</h3>
 
             <p>Hello, my name is Philip and I'm a web developer. I've had an interest in technology and engineering from a very young age. I got into building static websites when I was about 13 years old when I started to backwards engineer other websites to see how they were built. </p>
@@ -19,7 +19,7 @@
             </ul>
         </div>
 
-        <div class="text-center">
+        <div class="about__img text-center">
             <img src="@/assets/images/profile.jpg">
         </div>
     </section>
@@ -40,15 +40,18 @@ export default defineComponent({
 #about{
     margin-top:80px;
 
-    div{
+    .about__text{
         width: 50%;
         display: inline-block;
         vertical-align:top;
 
-        img{
-            max-width: 350px
-        }
+        
     }
+
+    .about__img{
+            max-width: 350px;
+            display: inline-block;
+        }
 
     h3{
         font-size: 28px;
@@ -65,5 +68,22 @@ export default defineComponent({
         max-width: 100%;
     }
 }
+
+
+
+  @media screen and (max-width:768px) {
+
+    #about{
+
+        .about__text,
+        .about__img{
+           width: 100%;
+        }
+    }
+
+
+
+        
+  }
 
 </style>

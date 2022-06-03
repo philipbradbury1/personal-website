@@ -30,5 +30,20 @@ export default defineComponent({
   main{
     padding: 0 150px;
   }
+
+
+
+  @media screen and (max-width:768px) {
+      main{
+        padding: 0 60px;
+      }
+  }
+
+  @media screen and (max-width:575px) {
+    main{
+      padding: 0 40px;
+    }
+  }
+
   
 </style>

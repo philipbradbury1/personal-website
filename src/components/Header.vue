@@ -38,6 +38,7 @@ header{
     display: flex;
     justify-content: space-between;
     height: 80px;
+    position: fixed;
 
     .logo-img{
       width:75px;
@@ -75,5 +76,16 @@ nav {
       padding: 0.75rem 1rem;
   }
 }
+
+@media screen and (max-width:768px) {
+
+  header{
+    .logo-img{
+      width:35px;
+    }
+  }
+}
+
+
 
 </style>
