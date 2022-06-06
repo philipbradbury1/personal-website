@@ -50,8 +50,8 @@ export default defineComponent({
         -moz-border-radius: 70px; 
         -webkit-border-radius: 70px; 
         border-radius: 70px;
-        right: 0;
-        top: 0;
+        right: 0px;
+        top: 85px;
     }
 
     .circle2{
@@ -62,7 +62,7 @@ export default defineComponent({
         -webkit-border-radius: 70px; 
         border-radius: 70px;
         right: 30%;
-        top: 66%;
+        top: 78%;
     }
 
     .circle3{
@@ -73,7 +73,7 @@ export default defineComponent({
         -webkit-border-radius: 70px; 
         border-radius: 70px;
         right: 20%;
-        top: 30%;
+        top: 37%;
     }
 
     .circle4{
@@ -84,7 +84,7 @@ export default defineComponent({
         -webkit-border-radius: 70px; 
         border-radius: 70px;
         right: 30%;
-        top: 21%;
+        top: 28%;
     }
 
     .circle5{
@@ -95,7 +95,7 @@ export default defineComponent({
         -webkit-border-radius: 70px; 
         border-radius: 70px;
         right: 5%;
-        top: 30%;
+        top: 40%;
     }
 
     .circle6{
@@ -106,7 +106,7 @@ export default defineComponent({
         -webkit-border-radius: 70px; 
         border-radius: 70px;
         right: 12%;
-        top: 64%;
+        top: 75%;
     }
 
     .circle{
@@ -122,8 +122,8 @@ export default defineComponent({
         border-bottom: 14px solid $neon-purple; 
         border-left: 8px solid transparent; 
         border-right: 8px solid transparent;
-        right: 15%;
-        top: 15%;
+        right: 18%;
+        top: 24%;
     }
 
     .triangle2{
@@ -131,7 +131,7 @@ export default defineComponent({
         border-left: 16px solid transparent; 
         border-right: 16px solid transparent;
         right: 2%;
-        top: 70%;
+        top: 82%;
     }
 
     .triangle3{
@@ -139,7 +139,7 @@ export default defineComponent({
         border-left: 42px solid transparent; 
         border-right: 42px solid transparent;
         right: 8%;
-        top: 45%;
+        top: 54%;
     }
 
     .triangle-up1{
@@ -147,7 +147,7 @@ export default defineComponent({
         border-left: 16px solid transparent; 
         border-right: 16px solid transparent;
         right: 35%;
-        top: 10%;
+        top: 20%;
     }
 
     h1{
@@ -172,6 +172,34 @@ export default defineComponent({
         height: 100vh;
     }
 
+    @media screen and (max-width:991px) {
+
+        .circle2{
+            right: 56%
+        }
+
+        .circle3{
+            right: 36%
+        }
+
+        .circle4{
+            right: 63%
+        }
+
+        .circle6{
+            right: 36%
+        }
+        
+        .triangle1{
+            right: 35%;
+        }
+
+        .triangle-up1{
+            right: 77%;
+        }
+
+    }
+
 
     @media screen and (max-width:768px) {
 
@@ -179,11 +207,63 @@ export default defineComponent({
             font-size: 40px;
         }
 
-
-
         h3{
             font-size: 26px;
         }
-  }
+
+        .circle2{
+            right: 56%
+        }
+
+        .circle3{
+            right: 36%
+        }
+
+        .circle4{
+            right: 63%
+        }
+
+        .circle6{
+            right: 36%
+        }
+        
+        .triangle1{
+            right: 35%;
+        }
+
+        .triangle-up1{
+            right: 77%;
+        }
+    }
+
+
+    @media screen and (max-width:576px) {
+
+        
+        .circle2{
+            right: 64%
+        }
+
+        .circle3{
+            right: 46%
+        }
+
+        .circle4{
+            right: 73%
+        }
+
+        .circle6{
+            right: 46%
+        }
+        
+        .triangle1{
+            right: 45%;
+        }
+
+        .triangle-up1{
+            right: 87%;
+        }
+    
+    }
 
 </style>

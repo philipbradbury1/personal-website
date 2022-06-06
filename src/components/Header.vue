@@ -1,30 +1,54 @@
 <template>
     <header>
-
+      
         <div>
-          <img  src="@/assets/images/logo.png" class="logo-img" style="">  
+          <img src="@/assets/images/logo.png" class="logo-img" style="">  
         </div>
 
-        <nav>
-            <div>
-                <router-link to="/#about">About</router-link>
-                <router-link to="/#featured">Projects</router-link>
-                <router-link to="/#work">Work</router-link>
-                <router-link to="/#contact">Contact</router-link>
-                <div>
-                    <a href="./static/resume.pdf" class="button" target="_blank" rel="noopener noreferrer">Resume</a>
-                </div>
+        <div class="main-menu">
+          <NavSection/>
+        </div>
+        <div class="mobile-menu-container">
+         <button class="btn-menu" :class="{ 'close': showMenu}" @click="menuToggle">
+           <div class="ham-btn-container">
+            <div class="ham-btn">
             </div>
-        </nav>
+          </div>
+         </button>
+         <div class="mobile-menu" :class="{ 'showMenu': showMenu}">
+          <div>
+            <NavSection/>
+          </div>
+        </div>
+        </div>
+        
     
     </header>
 </template>
 
 <script lang="ts">
 import { defineComponent } from 'vue';
+import { ref } from 'vue'
+import NavSection from '@/components/Nav.vue';
 
 export default defineComponent({
   name: 'HeaderMain',
+  components: {
+    NavSection
+  },
+
+  setup(){
+
+      let showMenu = ref(false);
+
+      const menuToggle = () => showMenu.value = !showMenu.value;
+
+      return{
+        showMenu,
+        menuToggle
+      }
+    
+  }
 
 });
 </script>
@@ -32,50 +56,33 @@ export default defineComponent({
 
 <style lang="scss">
 
-@import "@/assets/scss/variables.scss";
+  @import "@/assets/scss/variables.scss";
  
-header{
+  header{
     display: flex;
     justify-content: space-between;
     height: 80px;
     position: fixed;
+    z-index: 11;
+    width: 100%;
+    align-items: center;
+    background-color: $navy-blue;
 
     .logo-img{
       width:75px;
       margin-top:10px;
       margin-left: 48px;
     }
+
+    .mobile-menu{
+      display: none;
+    }
+
+    .mobile-menu-container{
+      display: none;
+    }
 } 
 
-nav {
-  padding: 30px;
-
-  >div{
-      display: flex;   
-      align-items: center;
-  }
-  
-
-  a {
-    font-weight: bold;
-    color: #2c3e50;
-    text-decoration: none;
-    margin-right: 20px;
-    margin-left: 20px;
-
-    &.router-link-exact-active {
-      color: $neon-purple;
-    }
-  }
-
-
-  .button{
-      background-color: $neon-purple;
-      color: #ffffff;
-      border-radius: 5px;
-      padding: 0.75rem 1rem;
-  }
-}
 
 @media screen and (max-width:768px) {
 
@@ -83,7 +90,97 @@ nav {
     .logo-img{
       width:35px;
     }
+
+    .mobile-menu.showMenu{
+      display: block;
+    } 
+
+    .mobile-menu-container{
+      display: block;
+    }
+
   }
+
+ 
+
+  .btn-menu{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 20;
+    border: 0;
+    background: transparent;
+    position: relative;
+    margin-right: 48px;
+    cursor: pointer;
+  }
+
+  .ham-btn-container{
+    height: 24px;
+    position: relative;
+    width: 25px;
+  }
+
+  .ham-btn{
+    height: 2px;
+    width: 25px;
+    background-color: $neon-purple;
+    position: absolute;
+    top: 50%;
+    
+  }
+
+  .ham-btn:before,
+  .ham-btn:after{
+    content: "";
+    display: block;
+    height: 2px;
+    width: 25px;
+    background-color: $neon-purple;
+    position: absolute;
+  }
+
+  .ham-btn:before{
+    top: -10px;
+  }
+
+  .ham-btn:after{
+    bottom: -10px;
+  }
+
+  .btn-menu.close .ham-btn{
+    transform: rotate(-45deg);
+  }
+
+  .btn-menu.close .ham-btn:before{
+    transform: rotate(90deg);
+    top: 0;
+  }
+
+  .btn-menu.close .ham-btn:after{
+    display: none;
+  }
+
+  .main-menu{
+    display: none;
+  }
+
+  .mobile-menu > div{
+    display: flex;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    background-color: $navy-blue;
+    width: 70vw;
+    height: 100vh;
+    z-index: 10;
+    position: fixed;
+    right: 0px;
+    top: 0px;
+    bottom: 0px;
+  }
+
+
 }
 
 
