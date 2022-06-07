@@ -31,8 +31,6 @@ export default defineComponent({
     padding: 0 150px;
   }
 
-
-
   @media screen and (max-width:768px) {
 
     body.blur main > * {
@@ -50,5 +48,4 @@ export default defineComponent({
     }
   }
 
-  
 </style>

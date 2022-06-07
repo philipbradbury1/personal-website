@@ -39,6 +39,10 @@ export default defineComponent({
 
       const menuToggle = () => {
 
+        console.log('fired');
+
+        console.log(showMenu.value);
+
         showMenu.value = !showMenu.value;
         document.body.style.overflow = showMenu.value ? 'hidden' : '';
         showMenu.value ? document.body.classList.add('blur') : document.body.classList.remove('blur');
