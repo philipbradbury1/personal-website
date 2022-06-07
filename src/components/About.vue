@@ -44,8 +44,6 @@ export default defineComponent({
         width: 50%;
         display: inline-block;
         vertical-align:top;
-
-        
     }
 
     .about__img{
@@ -59,7 +57,7 @@ export default defineComponent({
 
     ul{
         display: grid;
-        grid-template-columns: 200px 200px;
+        grid-template-columns: 200px min(200px, 100%);
         list-style-type: none;
         padding: 0;
     }
@@ -79,6 +77,8 @@ export default defineComponent({
         .about__img{
            width: 100%;
         }
+
+
     }
 
 

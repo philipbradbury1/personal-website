@@ -1,10 +1,10 @@
 <template>
     <nav>
         <div>
-            <router-link to="/#about">About</router-link>
-            <router-link to="/#featured">Projects</router-link>
-            <router-link to="/#work">Work</router-link>
-            <router-link to="/#contact">Contact</router-link>
+            <router-link @click="$emit('link-clicked')" to="/#about">About</router-link>
+            <router-link @click="$emit('link-clicked')" to="/#featured">Projects</router-link>
+            <router-link @click="$emit('link-clicked')" to="/#work">Work</router-link>
+            <router-link @click="$emit('link-clicked')" to="/#contact">Contact</router-link>
             <div>
                 <a href="./static/resume.pdf" class="button" target="_blank" rel="noopener noreferrer">Resume</a>
             </div>
@@ -17,6 +17,10 @@ import { defineComponent } from 'vue';
 
 export default defineComponent({
   name: 'AboutSection',
+
+  setup(props , {emit}){
+      emit('link-clicked');
+  }
 
 });
 </script>

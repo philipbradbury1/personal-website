@@ -34,9 +34,14 @@ export default defineComponent({
 
 
   @media screen and (max-width:768px) {
-      main{
+
+    body.blur main > * {
+      filter: blur(4px) brightness(0.8);
+    }       
+
+    main{
         padding: 0 60px;
-      }
+    }
   }
 
   @media screen and (max-width:575px) {

@@ -1,10 +1,8 @@
 <template>
     <header>
-      
         <div>
           <img src="@/assets/images/logo.png" class="logo-img" style="">  
         </div>
-
         <div class="main-menu">
           <NavSection/>
         </div>
@@ -17,12 +15,10 @@
          </button>
          <div class="mobile-menu" :class="{ 'showMenu': showMenu}">
           <div>
-            <NavSection/>
+            <NavSection @link-clicked="menuToggle" />
           </div>
         </div>
         </div>
-        
-    
     </header>
 </template>
 
@@ -41,7 +37,13 @@ export default defineComponent({
 
       let showMenu = ref(false);
 
-      const menuToggle = () => showMenu.value = !showMenu.value;
+      const menuToggle = () => {
+
+        showMenu.value = !showMenu.value;
+        document.body.style.overflow = showMenu.value ? 'hidden' : '';
+        showMenu.value ? document.body.classList.add('blur') : document.body.classList.remove('blur');
+      
+      }
 
       return{
         showMenu,
