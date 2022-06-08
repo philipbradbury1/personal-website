@@ -45,11 +45,11 @@ export default defineComponent({
 
     .about__text{
         vertical-align:top;
-        flex-basis: 50%;
+        flex-basis: 40%;
     }
 
     .about__img{
-        flex-basis: 50%;
+        flex-basis: 40%;
             
 
         img{
