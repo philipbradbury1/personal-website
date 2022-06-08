@@ -39,10 +39,6 @@ export default defineComponent({
 
       const menuToggle = () => {
 
-        console.log('fired');
-
-        console.log(showMenu.value);
-
         showMenu.value = !showMenu.value;
         document.body.style.overflow = showMenu.value ? 'hidden' : '';
         showMenu.value ? document.body.classList.add('blur') : document.body.classList.remove('blur');
@@ -75,7 +71,7 @@ export default defineComponent({
     background-color: $navy-blue;
 
     .logo-img{
-      width:75px;
+      width:60px;
       margin-top:10px;
       margin-left: 48px;
     }

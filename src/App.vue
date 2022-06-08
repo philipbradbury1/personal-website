@@ -27,7 +27,7 @@ body{
   padding: 0;
   background-color: $navy-blue;
   color: $grey;
-  max-width: 1800px;
+  
 }
 
 #app {

@@ -39,17 +39,26 @@ export default defineComponent({
 
 #about{
     margin-top:80px;
+    justify-content: space-evenly;
+    flex-direction: row;
+    display: flex;
 
     .about__text{
-        width: 50%;
-        display: inline-block;
         vertical-align:top;
+        flex-basis: 50%;
     }
 
     .about__img{
-            max-width: 350px;
-            display: inline-block;
+        flex-basis: 50%;
+            
+
+        img{
+            padding: 0 50px;
+            box-sizing: border-box;
+            max-width: 400px;
         }
+
+    }
 
     h3{
         font-size: 28px;
@@ -57,7 +66,7 @@ export default defineComponent({
 
     ul{
         display: grid;
-        grid-template-columns: 200px min(200px, 100%);
+        grid-template-columns: 200px min(120px, 100%);
         list-style-type: none;
         padding: 0;
     }
@@ -67,23 +76,35 @@ export default defineComponent({
     }
 }
 
+ @media screen and (max-width:992px) {
+
+    #about{
+
+        .about__img{
+            img{
+                padding: 0 20px;
+
+            }
+        }
+
+    }
+}
+  
+
 
 
   @media screen and (max-width:768px) {
 
     #about{
 
+        flex-direction: column;
+
         .about__text,
         .about__img{
            width: 100%;
+           flex-basis: 100%;
         }
-
-
     }
-
-
-
-        
   }
 
 </style>

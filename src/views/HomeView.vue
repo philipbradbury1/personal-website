@@ -29,6 +29,8 @@ export default defineComponent({
 <style lang="scss">
   main{
     padding: 0 150px;
+    margin: 0 auto;
+    max-width: 1800px;
   }
 
   @media screen and (max-width:768px) {
