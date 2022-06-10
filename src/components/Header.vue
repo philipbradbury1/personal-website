@@ -1,13 +1,13 @@
 <template>
     <header>
         <div>
-          <img src="@/assets/images/logo.png" class="logo-img" style="">  
+          <img src="@/assets/images/logo.png" class="logo-img" alt="Logo">  
         </div>
         <div class="main-menu">
           <NavSection/>
         </div>
         <div class="mobile-menu-container">
-         <button class="btn-menu" :class="{ 'close': showMenu}" @click="menuToggle">
+         <button class="btn-menu" aria-label="Hamburger Menu" :class="{ 'close': showMenu}" @click="menuToggle">
            <div class="ham-btn-container">
             <div class="ham-btn">
             </div>

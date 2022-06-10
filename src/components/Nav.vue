@@ -6,7 +6,7 @@
             <router-link @click="$emit('link-clicked')" to="/#work">Work</router-link>
             <router-link @click="$emit('link-clicked')" to="/#contact">Contact</router-link>
             <div>
-                <a href="./static/resume.pdf" class="button" target="_blank" rel="noopener noreferrer">Resume</a>
+                <a href="./static/resume.pdf" class="button" target="_blank" rel="noopener noreferrer" aria-label="View Resume">Resume</a>
             </div>
         </div>
     </nav>

@@ -2,7 +2,7 @@
     <section class="hero" >
         <p>Hello, My name is</p>
         <h1>Philip Bradbury</h1>
-        <h3>I like to create things for the web</h3>
+        <h2>I like to create things for the web</h2>
         <div>
             <p>I'm a web developer that creates immersive front-end (and occasionally back-end) digital experiences. Currently, I'm working with a team building a SaaS application.  </p>
         </div>
@@ -155,7 +155,7 @@ export default defineComponent({
         margin: 0;
     }
 
-    h3{
+    h2{
         font-size: 60px;
         margin: 0;
     }

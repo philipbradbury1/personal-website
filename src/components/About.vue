@@ -20,7 +20,7 @@
         </div>
 
         <div class="about__img text-center">
-            <img src="@/assets/images/profile.jpg">
+            <img src="@/assets/images/profile.jpg" alt="Image of Philip Bradbury">
         </div>
     </section>
 </template>
@@ -55,7 +55,9 @@ export default defineComponent({
         img{
             padding: 0 50px;
             box-sizing: border-box;
-            max-width: 400px;
+            width: 400px;
+            max-width: 100%;
+            height: auto;
         }
 
     }
