@@ -207,7 +207,7 @@ export default defineComponent({
             font-size: 40px;
         }
 
-        h3{
+        h2{
             font-size: 26px;
         }
 
